@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-20T00:56:28 IST" name="Default suite" finished-at="2023-12-20T00:56:28 IST" duration-ms="67">
+  <suite started-at="2023-12-21T02:01:18 IST" name="Default suite" finished-at="2023-12-21T02:01:18 IST" duration-ms="54">
     <groups>
     </groups>
-    <test started-at="2023-12-20T00:56:28 IST" name="Default test" finished-at="2023-12-20T00:56:28 IST" duration-ms="67">
-      <class name="FrameWork.TestNG1.AppTest">
-        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:FrameWork.TestNG1.AppTest@71238fc2]" started-at="2023-12-20T00:56:28 IST" name="shouldAnswerWithTrue" finished-at="2023-12-20T00:56:28 IST" duration-ms="10" status="PASS">
+    <test started-at="2023-12-21T02:01:18 IST" name="Default test" finished-at="2023-12-21T02:01:18 IST" duration-ms="54">
+      <class name="FrameWork.TestNG1.JavaStreams">
+        <test-method signature="method1()[pri:0, instance:FrameWork.TestNG1.JavaStreams@71238fc2]" started-at="2023-12-21T02:01:18 IST" name="method1" finished-at="2023-12-21T02:01:18 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- shouldAnswerWithTrue -->
-      </class> <!-- FrameWork.TestNG1.AppTest -->
+        </test-method> <!-- method1 -->
+      </class> <!-- FrameWork.TestNG1.JavaStreams -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
