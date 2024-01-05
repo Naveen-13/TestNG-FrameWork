@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-01T16:19:50 IST" name="Default suite" finished-at="2024-01-01T16:20:01 IST" duration-ms="10752">
+  <suite started-at="2024-01-05T13:07:25 IST" name="Default suite" finished-at="2024-01-05T13:07:36 IST" duration-ms="11343">
     <groups>
     </groups>
-    <test started-at="2024-01-01T16:19:50 IST" name="Default test" finished-at="2024-01-01T16:20:01 IST" duration-ms="10752">
+    <test started-at="2024-01-05T13:07:25 IST" name="Default test" finished-at="2024-01-05T13:07:36 IST" duration-ms="11343">
       <class name="FrameWork.TestNG1.StandAloneTest">
-        <test-method signature="alone()[pri:0, instance:FrameWork.TestNG1.StandAloneTest@16610890]" started-at="2024-01-01T16:19:50 IST" name="alone" finished-at="2024-01-01T16:20:01 IST" duration-ms="10711" status="PASS">
+        <test-method signature="alone()[pri:0, instance:FrameWork.TestNG1.StandAloneTest@2b91004a]" started-at="2024-01-05T13:07:25 IST" name="alone" finished-at="2024-01-05T13:07:36 IST" duration-ms="11280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alone -->
