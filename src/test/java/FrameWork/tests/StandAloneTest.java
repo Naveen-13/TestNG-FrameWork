@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import FrameWork.abstractcomponents.OrderPage;
 import FrameWork.baseComponents.Base;
 import FrameWork.pageObjects.CheckoutPage;
 import FrameWork.pageObjects.ConfirmPage;
@@ -12,13 +13,12 @@ import FrameWork.pageObjects.MyCart;
 import FrameWork.pageObjects.ProductCatalogue;
 
 public class StandAloneTest extends Base {
+	public String productName = "ZARA COAT 3";
 
 	@Test
 	public void alone() throws InterruptedException, IOException {
 
-		String productName = "ZARA COAT 3";
 		String countryName = "India";
-
 		ProductCatalogue productcatalogue = landingPage.loginApplication("naveen@gmail.com", "Naveen@9797");
 		productcatalogue.getProductList();
 		MyCart mycart = productcatalogue.addProductToCart(productName);
@@ -29,6 +29,13 @@ public class StandAloneTest extends Base {
 		String actualMessage = confirmPage.purchaseValidation();
 		Assert.assertTrue(actualMessage.equalsIgnoreCase("Thankyou for the order."));
 
+	}
+
+	@Test(dependsOnMethods = { "alone" })
+	public void orderValidation() {
+		ProductCatalogue productcatalogue = landingPage.loginApplication("naveen@gmail.com", "Naveen@9797");
+		OrderPage orderPage = productcatalogue.goToOrdersPage();
+		Assert.assertTrue(orderPage.verifyOrderDisplay(productName));
 	}
 }
 
