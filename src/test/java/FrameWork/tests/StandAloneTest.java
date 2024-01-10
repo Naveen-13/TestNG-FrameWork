@@ -19,7 +19,7 @@ public class StandAloneTest extends Base {
 	public String productName = "ZARA COAT 3";
 
 	@Test
-	public void alone(HashMap <String, String> input) throws InterruptedException, IOException {
+	public void alone(HashMap<String, String> input) throws InterruptedException, IOException {
 
 		String countryName = "India";
 		ProductCatalogue productcatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
