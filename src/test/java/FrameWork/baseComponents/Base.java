@@ -43,16 +43,19 @@ public class Base {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
 		driver = initilizeDriver();
 		landingPage = new LandingPage(driver);
 		landingPage.goToLink();
 		return landingPage;
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		driver.close();
+		//driver.close();
+		driver.quit();  // To resolve the connection reset warning
 	}
+	
+	
 
 }

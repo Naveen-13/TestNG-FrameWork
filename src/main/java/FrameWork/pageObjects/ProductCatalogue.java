@@ -44,6 +44,7 @@ public class ProductCatalogue extends AbstractComponent {
 				.findFirst().orElse(null);
 		return desiredProd;
 	}
+	
 
 	public MyCart addProductToCart(String productName) throws InterruptedException {
 		WebElement desiredElement = getProductByName(productName);
