@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -38,6 +39,7 @@ public class Base {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			
 		}
 		else if(browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver();
@@ -64,7 +66,6 @@ public class Base {
 		//driver.close();
 		driver.quit();  // To resolve the connection reset warning
 	}
-	
 	
 	public List<HashMap<String, String>> getJsonData() throws IOException {
 		//Reading the file to String 

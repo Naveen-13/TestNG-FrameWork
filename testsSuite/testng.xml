@@ -4,13 +4,13 @@
   <test thread-count="5" name="Submit Order validation">
     <classes>
       <class name="FrameWork.tests.StandAloneTest"/>
+      
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="Error Validation on Login page">
 	<classes>
 		<class name="FrameWork.tests.ErrorValidation"/>
-	</classes>  
-	  
+	</classes>   
   </test>
 </suite> <!-- Suite -->

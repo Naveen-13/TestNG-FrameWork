@@ -10,8 +10,7 @@ import FrameWork.abstractcomponents.AbstractComponent;
 ;
 
 public class LandingPage extends AbstractComponent {
-	WebDriver driver;
-
+	public WebDriver driver;
 	public LandingPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -20,7 +19,7 @@ public class LandingPage extends AbstractComponent {
 
 	@FindBy(id = "userEmail")
 	WebElement email_Element;
-
+	
 	@FindBy(id = "userPassword")
 	WebElement userPasswordElement;
 

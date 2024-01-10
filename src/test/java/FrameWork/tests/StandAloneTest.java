@@ -18,10 +18,11 @@ import FrameWork.pageObjects.ProductCatalogue;
 public class StandAloneTest extends Base {
 	public String productName = "ZARA COAT 3";
 
-	@Test
+	@Test(dataProvider = "getData")
 	public void alone(HashMap<String, String> input) throws InterruptedException, IOException {
 
 		String countryName = "India";
+		
 		ProductCatalogue productcatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		productcatalogue.getProductList();
 		MyCart mycart = productcatalogue.addProductToCart(input.get("product"));
@@ -45,7 +46,7 @@ public class StandAloneTest extends Base {
 	public Object[][] getData() throws IOException{
 		List<HashMap<String, String>> data = getJsonData();
 		return new Object[] [] {
-			{data.get(0)}, {data.get(1)}
+			{data.get(0)}, {data.get(1)}, {data.get(2)}
 		};
 	}
 	
