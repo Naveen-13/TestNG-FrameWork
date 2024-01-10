@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FrameWork.tests.ErrorValidation">
+      <class name="FrameWork.tests.StandAloneTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="loginError"/>
+          <include name="alone"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- FrameWork.tests.ErrorValidation -->
+      </class> <!-- FrameWork.tests.StandAloneTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

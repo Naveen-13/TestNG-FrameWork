@@ -1,8 +1,11 @@
 package FrameWork.tests;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import FrameWork.abstractcomponents.OrderPage;
@@ -16,13 +19,13 @@ public class StandAloneTest extends Base {
 	public String productName = "ZARA COAT 3";
 
 	@Test
-	public void alone() throws InterruptedException, IOException {
+	public void alone(HashMap <String, String> input) throws InterruptedException, IOException {
 
 		String countryName = "India";
-		ProductCatalogue productcatalogue = landingPage.loginApplication("naveen@gmail.com", "Naveen@9797");
+		ProductCatalogue productcatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		productcatalogue.getProductList();
-		MyCart mycart = productcatalogue.addProductToCart(productName);
-		Boolean result = mycart.cartValidation(productName);
+		MyCart mycart = productcatalogue.addProductToCart(input.get("product"));
+		Boolean result = mycart.cartValidation(input.get("product"));
 		Assert.assertTrue(result);
 		CheckoutPage checkoutPage = mycart.goToCheckoutPage();
 		ConfirmPage confirmPage = checkoutPage.validatingCart(countryName);
@@ -37,6 +40,16 @@ public class StandAloneTest extends Base {
 		OrderPage orderPage = productcatalogue.goToOrdersPage();
 		Assert.assertTrue(orderPage.verifyOrderDisplay(productName));
 	}
+	
+	@DataProvider
+	public Object[][] getData() throws IOException{
+		List<HashMap<String, String>> data = getJsonData();
+		return new Object[] [] {
+			{data.get(0)}, {data.get(1)}
+		};
+	}
+	
+	
 }
 
 //		WebDriverManager.chromedriver().setup();

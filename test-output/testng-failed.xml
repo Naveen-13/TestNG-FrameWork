@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Error Validation on Login page(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Submit Order validation(failed)">
     <classes>
-      <class name="FrameWork.tests.ErrorValidation">
+      <class name="FrameWork.tests.StandAloneTest">
         <methods>
+          <include name="orderValidation"/>
           <include name="launchApplication"/>
-          <include name="loginError"/>
+          <include name="alone"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- FrameWork.tests.ErrorValidation -->
+      </class> <!-- FrameWork.tests.StandAloneTest -->
     </classes>
-  </test> <!-- Error Validation on Login page(failed) -->
+  </test> <!-- Submit Order validation(failed) -->
 </suite> <!-- Failed suite [Suite] -->
