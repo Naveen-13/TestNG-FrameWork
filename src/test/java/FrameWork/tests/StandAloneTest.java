@@ -1,9 +1,13 @@
 package FrameWork.tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -49,6 +53,8 @@ public class StandAloneTest extends Base {
 			{data.get(0)}, {data.get(1)}, {data.get(2)}
 		};
 	}
+	
+
 	
 	
 }
